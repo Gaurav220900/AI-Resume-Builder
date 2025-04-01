@@ -1,0 +1,22 @@
+ # Node.js dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Build files
+dist/
+build/
+
+# Database & cache files
+*.sqlite
+*.db
+*.cache
+
+# VS Code settings
+.vscode/
