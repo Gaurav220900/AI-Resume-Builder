@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  margin: 0px 40px;
+  height: 20px;
+  position: sticky;
+  
+}
+
+.links {
+    display: flex;
+    gap: 40px;
+    font-weight: Bold;
+}
+
+.nav_button {
+    background-color: #086becf7; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+
+.nav_button2 {
+   /* Green */
+  
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  top: '-50px'
+ 
+}
+
+
+
+.nav_button:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}

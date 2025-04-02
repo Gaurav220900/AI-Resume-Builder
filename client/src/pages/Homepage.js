@@ -1,10 +1,12 @@
 import React from "react";
-
+import styles from "./CSS/styles.module.css";
+import Navbar from "../Components/Navbar/Navbar";
+import Section from "../Components/Section/Section";
 const Homepage = () => {
   return (
-    <div>
-      <h1>Welcome to the Homepage</h1>
-      <p>This is a simple homepage component.</p>
+    <div className={styles.body}>
+      <Navbar />
+      <Section />
     </div>
   );
 }
