@@ -25,7 +25,7 @@ const Section = () => {
                    <div className={styles.card}>
                         <div><MdOutlineViewList className={styles.card_icon} style={{fontSize: '25px', color: 'Black'}}/></div>
                         <h3 style={{margin: '0px'}}>Choose a template</h3>
-                        <p>elect a resume template that showcases your skills and experience effectively. Whether modern, professional, or creative, the right design helps you stand out. Customize fonts, colors, and layouts to match your style and industry needs.</p>
+                        <p>Select a resume template that showcases your skills and experience effectively. Whether modern, professional, or creative, the right design helps you stand out. Customize fonts, colors, and layouts to match your style and industry needs.</p>
                     </div> 
                    <div className={styles.card}>
                    <IoBulbOutline  className={styles.card_icon} style={{fontSize: '25px', color: 'Black'}}/>
