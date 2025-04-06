@@ -1,0 +1,87 @@
+.container {
+    width: 595px;
+    margin: 25px auto;
+    border: 10px solid #CCC;
+    border-radius: 10px;
+} 
+/*.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+} */
+
+/* Resume container */
+.resume {
+    width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Header styling */
+.resume-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-header .name {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.resume-header .contact-info {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0 0;
+}
+
+/* Section styling */
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Experience and education items */
+.experience-item, .education-item {
+    margin-bottom: 15px;
+}
+
+.experience-item h3, .education-item h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.experience-item p, .education-item p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0 0;
+}
+
+/* Skills list styling */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
