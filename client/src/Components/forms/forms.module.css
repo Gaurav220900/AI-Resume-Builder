@@ -1,0 +1,24 @@
+.container {
+    width: 900px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+input {
+    width: 98%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+}
+
