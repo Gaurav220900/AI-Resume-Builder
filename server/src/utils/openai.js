@@ -1,18 +1,24 @@
-const { Configuration, OpenAIApi } = require("openai");
-require("dotenv").config();
+// openai.js
+const OpenAI = require("openai");
+const dotenv = require("dotenv");
 
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+dotenv.config();
+console.log(process.env.OPENAI_API_KEY);
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 const generateContent = async (text) => {
-    const response = await openai.createCompletion({
-        model: "gpt-4",
-        prompt: `Improve this resume description: ${text}`,
-        max_tokens: 100,
-    });
-    return response.data.choices[0].text.trim();
+  const response = await openai.chat.completions.create({
+    model: 'gpt-4o',
+    messages: [
+      { role: 'user', content: `Improve this resume description: ${text}` }
+    ],
+    max_tokens: 100,
+  });
+
+  return response.choices[0].message.content.trim();
 };
 
 module.exports = { generateContent };

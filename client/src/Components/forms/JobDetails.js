@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import styles from './forms.module.css'; // Assuming you have a CSS module for styling
+import React, { useState,useEffect } from 'react';
+import styles from './forms.module.css'; 
+import api from '../../api'; 
 const JobDetails = () => {
     const [jobTitle, setJobTitle] = useState('');
     const [summary, setSummary] = useState('');
     const [skills, setSkills] = useState('');
-
+    const [suggestion, setSuggestion] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
         const jobData = {
@@ -15,6 +16,22 @@ const JobDetails = () => {
         console.log('Job Details:', jobData);
         // You can handle the data further, like sending it to an API
     };
+
+    useEffect(() => {
+        const fetchSuggestion = async () => {
+            if (summary.length > 30) {
+                try {
+                    const response = await api.post('/suggest', { summary });
+                    setSuggestion(response.data.suggestion);
+                } catch (error) {
+                    console.error('Error fetching suggestion:', error);
+                }
+            } else {
+                setSuggestion('Please enter a summary of at least 30 characters for AI suggestions.');
+            }
+        }
+        fetchSuggestion();
+    }, [summary]);   
 
     return (
         <form onSubmit={handleSubmit} className={styles.container}>
@@ -29,13 +46,17 @@ const JobDetails = () => {
                 />
             </div>
             <div>
-                <label htmlFor="summary">Summary:</label>
+                <label htmlFor="summary">Professional Summary:</label>
                 <textarea
                     id="summary"
                     value={summary}
                     onChange={(e) => setSummary(e.target.value)}
                     required
                 />
+                
+                
+                <p>{suggestion}</p>
+            
             </div>
             <div>
                 <label htmlFor="skills">Skills (comma-separated):</label>
@@ -47,7 +68,9 @@ const JobDetails = () => {
                     required
                 />
             </div>
-            <button type="submit">Save Job Details</button>
+            <button type="submit">Prev</button>
+            <button type="submit">Next</button>
+
         </form>
     );
 };

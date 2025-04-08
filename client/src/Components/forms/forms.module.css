@@ -22,3 +22,24 @@ label {
     display: block;
 }
 
+textarea {
+    width: 98%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button {
+    width: 150px;
+    text-align: center;
+    background-color:  #086becf7;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+

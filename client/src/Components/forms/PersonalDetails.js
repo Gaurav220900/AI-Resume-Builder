@@ -5,6 +5,7 @@ const PersonalDetails = () => {
         fullName: '',
         email: '',
         contact: '',
+        location: '',
         website: '',
     });
 
@@ -44,11 +45,23 @@ const PersonalDetails = () => {
                     required
                 />
             </div>
+            
             <div>
                 <label>Contact:</label>
                 <input
                     type="tel"
                     name="contact"
+                    value={formData.contact}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+
+            <div>
+                <label>Location:</label>
+                <input
+                    type="tel"
+                    name="Location"
                     value={formData.contact}
                     onChange={handleChange}
                     required
@@ -63,7 +76,7 @@ const PersonalDetails = () => {
                     onChange={handleChange}
                 />
             </div>
-            <button type="submit">Submit</button>
+            <button style={{float: 'right'}} type="submit">Submit</button>
         </form>
     );
 };
