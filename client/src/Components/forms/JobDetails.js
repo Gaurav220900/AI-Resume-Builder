@@ -17,21 +17,23 @@ const JobDetails = () => {
         // You can handle the data further, like sending it to an API
     };
 
-    useEffect(() => {
-        const fetchSuggestion = async () => {
-            if (summary.length > 30) {
-                try {
-                    const response = await api.post('/suggest', { summary });
-                    setSuggestion(response.data.suggestion);
-                } catch (error) {
-                    console.error('Error fetching suggestion:', error);
-                }
-            } else {
-                setSuggestion('Please enter a summary of at least 30 characters for AI suggestions.');
-            }
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission on Enter key
+            generateSuggestion(summary);
         }
-        fetchSuggestion();
-    }, [summary]);   
+    }
+
+    const generateSuggestion = async (text) => {
+        try {
+            console.log('in function generate suggestion');
+            
+            const response = await api.post('/suggest', { text });
+            setSuggestion(response.data.suggestion);
+        } catch (error) {
+            console.error('Error generating suggestion:', error);
+        }
+    }
 
     return (
         <form onSubmit={handleSubmit} className={styles.container}>
@@ -46,19 +48,6 @@ const JobDetails = () => {
                 />
             </div>
             <div>
-                <label htmlFor="summary">Professional Summary:</label>
-                <textarea
-                    id="summary"
-                    value={summary}
-                    onChange={(e) => setSummary(e.target.value)}
-                    required
-                />
-                
-                
-                <p>{suggestion}</p>
-            
-            </div>
-            <div>
                 <label htmlFor="skills">Skills (comma-separated):</label>
                 <input
                     type="text"
@@ -68,8 +57,25 @@ const JobDetails = () => {
                     required
                 />
             </div>
-            <button type="submit">Prev</button>
-            <button type="submit">Next</button>
+            <div>
+                <label htmlFor="summary">Professional Summary:</label>
+                <textarea
+                    id="summary"
+                    value={summary}
+                    placeholder='Write a brief summary of your professional background and career goals.'
+                    rows="10"
+                    onChange={(e) => setSummary(e.target.value)}
+                    onKeyDown={handleKeyPress}
+                    required
+                />
+                
+                
+                <p>{suggestion}</p>
+            
+            </div>
+           
+            <button type="submit">Back to personal detail page</button>
+            <button type="submit">Go to experience page</button>
 
         </form>
     );

@@ -76,7 +76,7 @@ const PersonalDetails = () => {
                     onChange={handleChange}
                 />
             </div>
-            <button style={{float: 'right'}} type="submit">Submit</button>
+            <button style={{float: 'right'}} type="submit">Go to Job details page</button>
         </form>
     );
 };

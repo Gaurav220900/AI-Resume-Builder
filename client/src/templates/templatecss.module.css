@@ -1,5 +1,5 @@
 .container {
-    width: 595px;
+    width: 70%;
     margin: 25px auto;
     border: 10px solid #CCC;
     border-radius: 10px;
@@ -15,7 +15,7 @@
 
 /* Resume container */
 .resume {
-    width: 800px;
+    width: 70%;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;

@@ -68,12 +68,13 @@ const ExperienceForm = () => {
                     </label>
                     <br />
                     <label>
-                        Description (Bullet Points, one per line):
+                        Description:
                         <textarea
                             value={experience.description.join("\n")}
                             onChange={(e) =>
                                 handleInputChange(index, "description", e.target.value)
                             }
+                            rows='10'
                         />
                     </label>
                     <br />
