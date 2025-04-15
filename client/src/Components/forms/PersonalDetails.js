@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import styles from './forms.module.css'; // Assuming you have a CSS module for styling
+import styles from './forms.module.css';
+import {Link} from 'react-router-dom'; // Assuming you have a CSS module for styling
 const PersonalDetails = () => {
     const [formData, setFormData] = useState({
         fullName: '',
@@ -76,7 +77,9 @@ const PersonalDetails = () => {
                     onChange={handleChange}
                 />
             </div>
+            <Link to="/jobdetails" style={{textDecoration: 'none'}}>
             <button style={{float: 'right'}} type="submit">Go to Job details page</button>
+            </Link>
         </form>
     );
 };

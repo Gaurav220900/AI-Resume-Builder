@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import styles from './forms.module.css'; 
+import {Link} from 'react-router-dom'; 
 import api from '../../api'; 
 const JobDetails = () => {
     const [jobTitle, setJobTitle] = useState('');
@@ -14,7 +15,7 @@ const JobDetails = () => {
             skills: skills.split(',').map(skill => skill.trim()),
         };
         console.log('Job Details:', jobData);
-        // You can handle the data further, like sending it to an API
+        
     };
 
     function handleKeyPress(event) {
@@ -37,6 +38,7 @@ const JobDetails = () => {
 
     return (
         <form onSubmit={handleSubmit} className={styles.container}>
+             <h2 style={{textAlign: 'center'}}>Personal Details</h2>
             <div>
                 <label htmlFor="jobTitle">Job Title:</label>
                 <input
@@ -73,9 +75,12 @@ const JobDetails = () => {
                 <p>{suggestion}</p>
             
             </div>
-           
+            <Link to='/personal-details' style={{textDecoration: 'none', color: 'black'}}>
             <button type="submit">Back to personal detail page</button>
+            </Link>
+            <Link to='/experience' style={{textDecoration: 'none', color: 'black'}}>
             <button type="submit">Go to experience page</button>
+            </Link>
 
         </form>
     );

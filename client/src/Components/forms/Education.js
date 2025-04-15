@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './forms.module.css'; // Assuming you have a CSS module for styling
+import { Link } from 'react-router-dom';
 const Education = ({ onSave }) => {
     const [educationDetails, setEducationDetails] = useState({
         school: '',
@@ -80,7 +81,12 @@ const Education = ({ onSave }) => {
                     onChange={handleChange}
                 />
             </div>
-            <button type="submit">Save</button>
+            <Link to="/experience" style={{textDecoration: 'none'}}>
+            <button type="submit">Back to Experience</button>
+            </Link>
+            <Link to='' style={{textDecoration: 'none'}}>
+            <button type="submit">View Your Resume</button>
+            </Link>
         </form>
     );
 };

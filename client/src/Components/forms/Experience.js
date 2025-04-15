@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./forms.module.css"; // Assuming you have a CSS module for styling
+import { Link } from "react-router-dom";
 const ExperienceForm = () => {
     const [experiences, setExperiences] = useState([
         { company: "", startDate: "", endDate: "", description: [""] },
@@ -86,6 +87,15 @@ const ExperienceForm = () => {
             {experiences.length < 3 && (
                 <button onClick={addExperience}>Add Experience</button>
             )}
+            <div style={{float: 'right'}}>
+                <Link to='/jobdetails' style={{textDecoration: 'none', color: 'black'}}>
+                <button type="submit">Back to Job details page</button>
+                </Link>
+                <Link to='/education' style={{textDecoration: 'none', color: 'black'}}>
+                <button type="submit">Go to education detail page</button>
+                </Link>
+                
+            </div>
         </div>
     );
 };

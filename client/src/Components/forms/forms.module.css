@@ -32,7 +32,7 @@ textarea {
 }
 
 button {
-    width: 150px;
+    padding: 5px 20px;
     text-align: center;
     background-color:  #086becf7;
     color: white;
