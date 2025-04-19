@@ -4,8 +4,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
-    margin: 0 auto;
+    margin: 40px auto;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 input {
@@ -32,7 +33,7 @@ textarea {
 }
 
 button {
-    padding: 5px 20px;
+    padding: 20px;
     text-align: center;
     background-color:  #086becf7;
     color: white;

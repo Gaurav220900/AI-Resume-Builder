@@ -65,7 +65,7 @@ const Education = ({ onSave }) => {
             <div>
                 <label>Start Date:</label>
                 <input
-                    type="date"
+                    type="month"
                     name="startDate"
                     value={educationDetails.startDate}
                     onChange={handleChange}
@@ -75,18 +75,20 @@ const Education = ({ onSave }) => {
             <div>
                 <label>End Date:</label>
                 <input
-                    type="date"
+                    type="month"
                     name="endDate"
                     value={educationDetails.endDate}
                     onChange={handleChange}
                 />
             </div>
+            <div style={{float: 'right', display: 'flex', gap: '20px'}}>
             <Link to="/experience" style={{textDecoration: 'none'}}>
-            <button type="submit">Back to Experience</button>
+            <button style={{backgroundColor:'white', color: 'black'}} type="submit">Back to Experience</button>
             </Link>
             <Link to='' style={{textDecoration: 'none'}}>
             <button type="submit">View Your Resume</button>
             </Link>
+            </div>
         </form>
     );
 };

@@ -85,11 +85,11 @@ const ExperienceForm = () => {
                 </div>
             ))}
             {experiences.length < 3 && (
-                <button onClick={addExperience}>Add Experience</button>
+                <button style={{backgroundColor: 'lightgreen', color: 'black'}} onClick={addExperience}>Add Experience</button>
             )}
-            <div style={{float: 'right'}}>
+            <div style={{float: 'right', display: 'flex', gap: '20px'}}>
                 <Link to='/jobdetails' style={{textDecoration: 'none', color: 'black'}}>
-                <button type="submit">Back to Job details page</button>
+                <button style={{backgroundColor: 'white', color: 'black'}} type="submit">Back to Job details page</button>
                 </Link>
                 <Link to='/education' style={{textDecoration: 'none', color: 'black'}}>
                 <button type="submit">Go to education detail page</button>

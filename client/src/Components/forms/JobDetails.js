@@ -38,7 +38,7 @@ const JobDetails = () => {
 
     return (
         <form onSubmit={handleSubmit} className={styles.container}>
-             <h2 style={{textAlign: 'center'}}>Personal Details</h2>
+             <h2 style={{textAlign: 'center'}}>Job Details</h2>
             <div>
                 <label htmlFor="jobTitle">Job Title:</label>
                 <input
@@ -75,13 +75,14 @@ const JobDetails = () => {
                 <p>{suggestion}</p>
             
             </div>
+            <div style={{float: 'right', display: 'flex', gap: '20px'}}>
             <Link to='/personal-details' style={{textDecoration: 'none', color: 'black'}}>
-            <button type="submit">Back to personal detail page</button>
+            <button type="submit" style={{backgroundColor: 'white', color: 'black'}}>Back to personal detail page</button>
             </Link>
             <Link to='/experience' style={{textDecoration: 'none', color: 'black'}}>
             <button type="submit">Go to experience page</button>
             </Link>
-
+            </div>
         </form>
     );
 };
