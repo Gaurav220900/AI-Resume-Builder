@@ -1,13 +1,12 @@
 import React from "react";
-import PersonalDetails from "../Components/forms/Tab1Form";
-const PersonalDetailPage = () => {
-
+import Tab from '../Components/forms/Tab';
+const ResumeDetailsTabPage = () => {
     return (
         <div className="resume-details-form">
-            <PersonalDetails />
+            <Tab />
             {/* You can include other components like ExperienceForm, EducationForm, etc. here */}
         </div>
     );
-};
+}
 
-export default PersonalDetailPage;
+export default ResumeDetailsTabPage;

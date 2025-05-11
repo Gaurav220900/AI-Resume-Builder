@@ -1,5 +1,5 @@
 import React from "react";
-import Experience from "../Components/forms/Experience";
+import Experience from "../Components/forms/Tab3Form";
 const ExperienceDetailPage = () => {
 
     return (

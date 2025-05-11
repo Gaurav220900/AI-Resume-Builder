@@ -1,5 +1,5 @@
 import React from "react";
-import JobDetails from "../Components/forms/JobDetails";
+import JobDetails from "../Components/forms/Tab2Form";
 const JobDetailPage = () => {
 
     return (

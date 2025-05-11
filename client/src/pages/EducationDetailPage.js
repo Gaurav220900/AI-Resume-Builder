@@ -1,5 +1,5 @@
 import React from "react";
-import Education from "../Components/forms/Education";
+import Education from "../Components/forms/Tab4Form";
 const EducationDetailPage = () => {
 
     return (

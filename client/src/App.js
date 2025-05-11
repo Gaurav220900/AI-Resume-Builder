@@ -6,6 +6,7 @@ import PersonalDetailPage from './pages/PersonalDetailPage';
 import JobDetailPage from './pages/JobDetailPage';
 import ExperienceDetailPage from './pages/ExperienceDetailPage';
 import EducationDetailPage from './pages/EducationDetailPage';
+import ResumeDetailsTabPage from './pages/ResumeDetailsTabPage';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/jobdetails" element={<JobDetailPage />} />
           <Route path="/experience" element={<ExperienceDetailPage />} />
           <Route path='/education' element={<EducationDetailPage />} />
+          <Route path='/resume-details' element={<ResumeDetailsTabPage />} />
           </Route>
         </Routes>
         
